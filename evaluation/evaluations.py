@@ -92,7 +92,7 @@ def main() -> int:
     timestamp = started_at.strftime("%Y%m%d-%H%M%S")
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    report_filename = f"report.json"
+    report_filename = f"report-{timestamp}-{run_id}.json"
     output_path = output_dir / report_filename
 
     test_results = run_meta_tests(args.tests, args.pytest_args)
